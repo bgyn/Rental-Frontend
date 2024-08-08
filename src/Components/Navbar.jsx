@@ -20,20 +20,20 @@ const Navbar = () => {
     ]
   return (
     <>
-        <div className='w-full h-[60px] flex items-center justify-between'>
+        <div className='w-full h-[60px] flex items-center justify-between bg-secondary px-6'>
         <div className='font-kanit text-2xl'>
               <p className=' text-[#003893]'>Rent<span className='text-[#DC143C]'>pal</span></p>
         </div>
         <div>
-            <ul className='flex items-center text-xl'>
+            <ul className='flex items-center justify-between text-xl gap-2 '>
                 <li>Products</li>
-                <p className='text-2xl'>|</p>
+                <div className='bg-black w-[2px] h-6'></div>
                 <li>Services</li>
                 
             </ul>
         </div>
         <div>
-            <ul>
+            <ul className='flex justify-between gap-3'>
             {NavLists.map((l)=><li key={l.id}><a href={l.link}>{l.title}</a></li>)}
 
             </ul>
