@@ -1,17 +1,22 @@
-import './App.css'
-import Navbar from './Components/Navbar'
-import Hero from './Components/Hero'
-function App() {
+import "./App.css";
 
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+
+function App() {
+  
 
   return (
-    <>
-    <main className=' overflow-x-hidden'>
-    <Navbar/>
-    <Hero />
-    </main>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Home/>}/>
+        <Route path='/about' element={<About/>} />
+        <Route path= '/contact' element={<Contact/>}/>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

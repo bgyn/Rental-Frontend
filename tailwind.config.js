@@ -3,9 +3,13 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    'node_modules/flowbite-react/lib/esm/**/*.js'
   ],
   theme: {
     extend: {
+      backgroundImage:{
+        'hero-img': 'url("./src/assets/hero-img.png")',
+      },
       colors:{
         primary:"#50B498",
         secondary:"#9CDBA6",
@@ -16,6 +20,9 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
+  
 }
 
