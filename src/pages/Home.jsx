@@ -3,6 +3,7 @@ import Navbar from '../Components/Navbar'
 import Hero from '../Components/Hero'
 import Category from '../Components/Category'
 import Scrollproducts from '../Components/Scrollproducts'
+import BrowseProducts from '../Components/BrowseProducts'
 
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
     <Hero/>
     <Category />
     <Scrollproducts/>
+    <BrowseProducts/>
     </>
   )
 }
