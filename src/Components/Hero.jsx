@@ -1,10 +1,9 @@
 import React from "react";
-import backImg from "../assets/hero-img.png";
 import {} from "flowbite";
 const Hero = () => {
   return (
-    <div className="w-full h-[40vh] bg-hero-img bg-cover bg-no-repeat flex items-center">
-      <form className="w-2/4 mx-auto ">
+    <div className="w-full h-[40vh] bg-hero-img bg-cover bg-no-repeat flex items-center justify-center">
+      <form className="w-3/4 lg:w-2/4 lg:2/4">
         <label
           htmlFor="default-search"
           className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
