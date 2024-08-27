@@ -1,13 +1,8 @@
 
 import { MdOutlineTwoWheeler } from "react-icons/md";
-import { useEffect } from 'react';
 
 const Category = () => {
-  useEffect(() => {
-    fetch("https://6103-2404-7c00-62-a70d-5177-4556-a366-327d.ngrok-free.app/api/categories/",{headers: {'Content-Type' : 'application/json'}})
-    .then(response => response.json())
-    .then(data => console.log(data))
-  },[])
+ 
   return (
     <>
         <div className='h-[20vh] px-4 mt-8 relative md:mx-8'>

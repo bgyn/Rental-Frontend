@@ -1,9 +1,9 @@
 import React from 'react'
-import Navbar from '../Components/Navbar'
-import Hero from '../Components/Hero'
-import Category from '../Components/Category'
-import Scrollproducts from '../Components/Scrollproducts'
-import BrowseProducts from '../Components/BrowseProducts'
+import Navbar from '../Components/Ui/Navbar'
+import Hero from '../Components/Ui/Hero'
+import Category from '../Components/Ui/Category'
+import Scrollproducts from '../Components/Ui/Scrollproducts'
+import BrowseProducts from '../Components/Ui/BrowseProducts'
 
 
 const Home = () => {
