@@ -1,5 +1,9 @@
 import React from 'react'
 import bicycle from "/Users/jay/Web learning/Rentpal/Rental-Frontend/src/assets/bicycle.avif";
+import car from '/Users/jay/Web learning/Rentpal/Rental-Frontend/src/assets/car.jpg';
+import phone from '/Users/jay/Web learning/Rentpal/Rental-Frontend/src/assets/phone.jpg';
+import laptop from '/Users/jay/Web learning/Rentpal/Rental-Frontend/src/assets/laptop.jpeg'
+import dirtbike from '/Users/jay/Web learning/Rentpal/Rental-Frontend/src/assets/dirt-bike.jpg';
 
 export const data = [
     {
@@ -13,9 +17,9 @@ export const data = [
     },
     {
       id: 2,
-      img: bicycle,
-      name: "Bicycle",
-      price: 500,
+      img: car,
+      name: "Honda Civic",
+      price: 50000,
       description:
         "This bike will make you feel like Superman! Pedal assisted electric mountain bike. I only to rent to the cool people who are positive to my vibe check.",
     
@@ -23,9 +27,9 @@ export const data = [
     },
     {
       id: 3,
-      img: bicycle,
-      name: "Bicycle",
-      price: 500,
+      img: dirtbike,
+      name: "Dirt bike",
+      price: 4000,
       description:
         "This bike will make you feel like Superman! Pedal assisted electric mountain bike. I only to rent to the cool people who are positive to my vibe check.",
     
@@ -33,9 +37,9 @@ export const data = [
     },
     {
       id: 4,
-      img: bicycle,
-      name: "Bicycle",
-      price: 500,
+      img: laptop,
+      name: "Dell Vostro",
+      price: 600,
       description:
         "This bike will make you feel like Superman! Pedal assisted electric mountain bike. I only to rent to the cool people who are positive to my vibe check.",
      
@@ -43,9 +47,9 @@ export const data = [
     },
     {
       id: 5,
-      img: bicycle,
-      name: "Bicycle",
-      price: 500,
+      img: phone,
+      name: "Iphone",
+      price: 800,
       description:
         "This bike will make you feel like Superman! Pedal assisted electric mountain bike. I only to rent to the cool people who are positive to my vibe check.",
      
@@ -63,9 +67,9 @@ export const data = [
     },
     {
       id: 7,
-      img: bicycle,
-      name: "Bicycle",
-      price: 500,
+      img: car,
+      name: "Modded honda civic",
+      price: 60000,
       description:
         "This bike will make you feel like Superman! Pedal assisted electric mountain bike. I only to rent to the cool people who are positive to my vibe check.",
       rating: "5.0",

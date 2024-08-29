@@ -12,6 +12,7 @@ const BrowseProducts = () => {
             return (
               <Product
                 key={d.id}
+                id={d.id}
                 name={d.name}
                 image={d.img}
                 descrip={d.description}
