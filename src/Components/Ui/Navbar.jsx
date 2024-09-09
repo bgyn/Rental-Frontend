@@ -2,6 +2,7 @@ import React from "react";
 import "flowbite";
 import { Navbar as Nav } from "flowbite-react";
 import { NavLink } from "react-router-dom";
+import logo from "/Users/jay/Web learning/Rentpal/Rental-Frontend/src/assets/Artboard.png";
 const Navbar = () => {
   return (
     <header>
@@ -11,7 +12,7 @@ const Navbar = () => {
             href="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-          <p className=" font-kanit text-2xl">Rent<span>pal</span></p>
+            <img src={logo} alt="Rentpal logo" />
           </a>
           <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <button
