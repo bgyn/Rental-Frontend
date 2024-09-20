@@ -2,7 +2,7 @@ import React from "react";
 import "flowbite";
 import { Navbar as Nav } from "flowbite-react";
 import { NavLink } from "react-router-dom";
-import logo from "/Users/jay/Web learning/Rentpal/Rental-Frontend/src/assets/Artboard.png";
+import logo from "../../assets/Artboard.png";
 const Navbar = () => {
   return (
     <header>
