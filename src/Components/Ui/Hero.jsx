@@ -1,5 +1,6 @@
-import React from "react";
+
 import {} from "flowbite";
+
 const Hero = () => {
   return (
     <div className="w-full h-[40vh] bg-hero-img bg-cover bg-no-repeat flex items-center justify-center">
