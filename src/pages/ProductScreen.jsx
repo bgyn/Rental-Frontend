@@ -10,21 +10,34 @@ const ProductScreen = () => {
   return (
     <>
       <Navbar />
-      <div className="hero bg-base-200 min-h-screen">
-        <div className="hero-content flex-col lg:flex-row">
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-            className="max-w-sm rounded-lg shadow-2xl"
-          />
-          <div>
-            <h1 className="text-5xl font-bold">Box Office News!</h1>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
-            <button className="btn btn-primary">Get Started</button>
+      <div className="flex flex-col md:px-20 lg:px-10 items-center">
+        <div className=" flex flex-col md:flex-row gap-5 ">
+          <div className="flex-1 justify-center">
+            <img
+              src={prodData[0].img}
+              alt="product image"
+              className="w-full h-[40vh] md:h-auto object-contain "
+            />
           </div>
+          <div className="flex-1">
+            <h3 className="font-semibold text-xl md:text-2xl">
+              {prodData[0].name} is available for the rent in Chitwan
+            </h3>
+            <p className="text-lg text-[#DC143C]">
+              Rs.{prodData[0].price} for a week
+            </p>
+            <div>
+            <button className="p-2 bg-[#DC143C] rounded-md">
+              Request for rent
+            </button>
+            <button className="p-2 bg-[#DC143C] rounded-md">
+              Add to cart
+            </button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p>{prodData[0].description}</p>
         </div>
       </div>
     </>
