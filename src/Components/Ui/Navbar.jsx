@@ -6,8 +6,18 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuVisibility, setMenuVisibility] = useState(false);
+  const [searchVisibility, setSearchVisibility]= useState(false);
+  window.addEventListener('scroll',scrollToSearch);
   function dropHandler() {
     setMenuVisibility(!menuVisibility);
+  }
+  function scrollToSearch(){
+    if(window.scrollY>=190){
+      setSearchVisibility(true);
+    }
+    else{
+      setSearchVisibility(false);
+    }
   }
   return (
     <header className="flex justify-around px-10 items-center w-full max-w-[1440px] sticky top-0 z-10 drop-shadow-md bg-slate-50">
@@ -20,7 +30,8 @@ const Navbar = () => {
           <Link to='/rent'>Rent</Link>
           <Link to='/sell'>Sell</Link>
         </div>
-        <form className="w-[32rem]">
+      </nav>
+       { searchVisibility && <form className="w-[35rem] ml-10 invisible md:visible">
           <label
             htmlFor="default-search"
             className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
@@ -59,8 +70,7 @@ const Navbar = () => {
               Search
             </button>
           </div>
-        </form>
-      </nav>
+        </form>}
       <div className="flex items-center gap-2 justify-end flex-1">
         <p>Jayash Shrestha</p>
         <a href="#" className="px-3 py-2 bg-black rounded-full text-white">
