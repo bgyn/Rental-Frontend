@@ -1,21 +1,20 @@
 import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
+import { IoCart } from "react-icons/io5";
 import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 
-
 const Navbar = () => {
   const [menuVisibility, setMenuVisibility] = useState(false);
-  const [searchVisibility, setSearchVisibility]= useState(false);
-  window.addEventListener('scroll',scrollToSearch);
+  const [searchVisibility, setSearchVisibility] = useState(false);
+  window.addEventListener("scroll", scrollToSearch);
   function dropHandler() {
     setMenuVisibility(!menuVisibility);
   }
-  function scrollToSearch(){
-    if(window.scrollY>=190){
+  function scrollToSearch() {
+    if (window.scrollY >= 190) {
       setSearchVisibility(true);
-    }
-    else{
+    } else {
       setSearchVisibility(false);
     }
   }
@@ -26,12 +25,13 @@ const Navbar = () => {
       </div>
       <nav className="hidden lg:flex items-center justify-between md:space-x-10 flex:3 ml-8">
         <div className="flex gap-2">
-          <Link to='/'>Buy</Link>
-          <Link to='/rent'>Rent</Link>
-          <Link to='/sell'>Sell</Link>
+          <Link to="/">Buy</Link>
+          <Link to="/rent">Rent</Link>
+          <Link to="/sell">Sell</Link>
         </div>
       </nav>
-       { searchVisibility && <form className="w-[35rem] lg:ml-40  invisible md:visible ">
+      {searchVisibility && (
+        <form className="w-[35rem] lg:ml-40  invisible md:visible ">
           <label
             htmlFor="default-search"
             className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
@@ -70,7 +70,8 @@ const Navbar = () => {
               Search
             </button>
           </div>
-        </form>}
+        </form>
+      )}
       <div className="flex items-center justify-end gap-2 flex-1">
         <p>Jayash Shrestha</p>
         <a href="#" className="px-3 py-2 bg-black rounded-full text-white">
@@ -79,11 +80,38 @@ const Navbar = () => {
         <button className="lg:hidden " onClick={dropHandler}>
           <FaChevronDown />
         </button>
+        <Link to='/cart'>
+         <IoCart size={26} />
+        </Link>
       </div>
-      <div className={`absolute xl:hidden top-20 left-0 w-full bg-white flex flex-col items-center gap-3 font-semibold tex-xl transform-transition ${menuVisibility? "opacity-100" : "opacity-0"}`} style={{transition: 'transform 0.3s ease, opacity 0.3s ease'}}>
-          <Link to='#' className="w-full text-center p-4 hover:bg-[#DC143C] transition-all cursor-pointer">Rent</Link>
-          <Link to='#' className="w-full text-center p-4 hover:bg-[#DC143C] transition-all cursor-pointer">Buy</Link>
-          <Link to='#' className="w-full text-center p-4 hover:bg-[#DC143C] transition-all cursor-pointer">Sell</Link>
+
+      <div
+        className={`absolute xl:hidden top-20 left-0 w-full bg-white flex flex-col items-center gap-3 font-semibold tex-xl transform-transition ${
+          menuVisibility ? "opacity-100" : "opacity-0"
+        }`}
+        style={{ transition: "transform 0.3s ease, opacity 0.3s ease" }}
+      >
+        <Link
+          to="/rent"
+          className="w-full text-center p-4 hover:bg-[#DC143C] transition-all cursor-pointer"
+        >
+          Rent
+        </Link>
+        <Link
+          to="#"
+          className="w-full text-center p-4 hover:bg-[#DC143C] transition-all cursor-pointer"
+        >
+          Buy
+        </Link>
+        <Link
+          to="/sell"
+          className="w-full text-center p-4 hover:bg-[#DC143C] transition-all cursor-pointer"
+        >
+          Sell
+        </Link>
+        <Link to='/cart' className="w-full text-center p-4 hover:bg-[#DC143C] transition-all cursor-pointer" >
+          Go to cart
+        </Link>
       </div>
     </header>
   );

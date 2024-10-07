@@ -16,6 +16,9 @@ const cartSlice = createSlice({
             if(!existingItems){
                 state.item.push({
                     id:newItem.id,
+                    price:newItem.price,
+                    img: newItem.img,
+                    name:newItem.name,
                 });
                 state.TotalQuantity++;
                 state.GrandPrice = state.GrandPrice + newItem.price; 
