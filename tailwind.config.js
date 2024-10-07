@@ -8,7 +8,8 @@ export default {
   theme: {
     extend: {
       backgroundImage:{
-        'hero-img': 'url("./src/assets/hero-img.png")',
+        'hero-img': 'url("/src/assets/hero-img.jpg")',
+        'view-back': 'url("/src/assets/images/View.jpg")'
       },
       colors:{
         primary:"#50B498",

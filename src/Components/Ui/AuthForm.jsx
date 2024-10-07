@@ -38,8 +38,8 @@ const AuthForm = () => {
   
 
   return (
-    <div className="flex justify-center items-center mx-auto h-screen">
-      <div className="bg-slate-400 flex flex-col p-8 rounded-lg">
+    <div className="flex justify-center items-center mx-auto h-screen bg-view-back bg-cover bg-center ">
+      <div className="flex flex-col p-8 rounded-lg backdrop-blur-md border-white border-[1px]">
         <h3 className="text-2xl font-bold leading-tight tracking-tight">
           {isLogin ? "Login to your account" : "Sign up for new account"}
         </h3>

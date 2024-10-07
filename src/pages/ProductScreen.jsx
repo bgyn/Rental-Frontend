@@ -9,7 +9,9 @@ const ProductScreen = () => {
   let { id } = useParams();
   const dispatch = useDispatch();
   const prodData = data.filter((prod) => prod.id == id);
+
   function addToCartHandler() {
+    console.log('pressed')
     dispatch(cartActions.addToCart({
       id: id,
       name:prodData[0].name,
@@ -33,10 +35,10 @@ const ProductScreen = () => {
             <h3 className="font-semibold text-xl md:text-2xl">
               {prodData[0].name} is available for the rent in Chitwan
             </h3>
-            <p className="text-lg text-[#DC143C]">
+            <p className="text-lg text-[#DC143C] my-6">
               Rs.{prodData[0].price} for a week
             </p>
-            <div>
+            <div className="flex gap-5 mt-3">
               <button className="p-2 bg-[#DC143C] rounded-md">
                 Request for rent
               </button>

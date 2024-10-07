@@ -26,10 +26,10 @@ const Cart = () => {
           </h5>
 
           <div className="flex items-center justify-between gap-5 ">
-            <button className="rounded-full py-2.5 px-3 bg-indigo-50 text-indigo-600 font-semibold text-xs text-center whitespace-nowrap transition-all duration-500 hover:bg-indigo-100">
+            <button className="rounded-full py-2.5 px-3 bg-indigo-50 text-[#003893] font-semibold text-xs text-center whitespace-nowrap transition-all duration-500 hover:bg-indigo-100">
               Promo Code?
             </button>
-            <h6 className="font-manrope font-bold text-3xl lead-10 text-indigo-600">
+            <h6 className="font-manrope font-bold text-3xl lead-10 text-[#003893]">
               {data.GrandPrice}
             </h6>
           </div>
@@ -38,9 +38,12 @@ const Cart = () => {
           <p className="font-normal text-base leading-7 text-gray-500 text-center mb-5 mt-6">
             Shipping taxes, and discounts calculated at checkout
           </p>
-          <button className="rounded-full py-4 px-6 bg-indigo-600 text-white font-semibold text-lg w-full text-center transition-all duration-500 hover:bg-indigo-700 ">
+          <div className="w-full flex justify-center">
+
+          <button className="rounded-full py-4 px-6 bg-[#DC143C] w-1/4 text-white font-semibold text-lg text-center transition-all duration-500 hover:bg-[#FF6B6B]">
             Checkout
           </button>
+          </div>
         </div>
       </div>
     </section>

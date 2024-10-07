@@ -80,7 +80,7 @@ const Navbar = () => {
         <button className="lg:hidden " onClick={dropHandler}>
           <FaChevronDown />
         </button>
-        <Link to='/cart'>
+        <Link to='/cart' className="hidden lg:flex">
          <IoCart size={26} />
         </Link>
       </div>
