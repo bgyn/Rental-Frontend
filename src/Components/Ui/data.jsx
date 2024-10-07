@@ -1,9 +1,9 @@
 import React from 'react'
-import bicycle from "/Users/jay/Web learning/Rentpal/Rental-Frontend/src/assets/bicycle.avif";
-import car from '/Users/jay/Web learning/Rentpal/Rental-Frontend/src/assets/car.jpg';
-import phone from '/Users/jay/Web learning/Rentpal/Rental-Frontend/src/assets/phone.jpg';
-import laptop from '/Users/jay/Web learning/Rentpal/Rental-Frontend/src/assets/laptop.jpeg'
-import dirtbike from '/Users/jay/Web learning/Rentpal/Rental-Frontend/src/assets/dirt-bike.jpg';
+import bicycle from "../../assets/bicycle.avif";
+import car from '../../assets/car.jpg';
+import phone from '../../assets/phone.jpg';
+import laptop from '../../assets/laptop.jpeg'
+import dirtbike from '../../assets/phone.jpg';
 
 export const data = [
     {

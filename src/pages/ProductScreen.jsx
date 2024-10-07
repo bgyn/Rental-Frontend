@@ -2,11 +2,21 @@ import React from "react";
 import Navbar from "../Components/Ui/Navbar";
 import { useParams } from "react-router-dom";
 import { data } from "../Components/Ui/data";
+import { cartActions } from "../../store/cartSlice";
+import { useDispatch } from "react-redux";
 
 const ProductScreen = () => {
   let { id } = useParams();
+  const dispatch = useDispatch();
   const prodData = data.filter((prod) => prod.id == id);
-  console.log(prodData);
+  function addToCartHandler() {
+    dispatch(cartActions.addToCart({
+      id: id,
+      name:prodData[0].name,
+      img: prodData[0].img,
+      price: prodData[0].price,
+      }));
+  }
   return (
     <>
       <Navbar />
@@ -27,12 +37,15 @@ const ProductScreen = () => {
               Rs.{prodData[0].price} for a week
             </p>
             <div>
-            <button className="p-2 bg-[#DC143C] rounded-md">
-              Request for rent
-            </button>
-            <button className="p-2 bg-[#DC143C] rounded-md">
-              Add to cart
-            </button>
+              <button className="p-2 bg-[#DC143C] rounded-md">
+                Request for rent
+              </button>
+              <button
+                className="p-2 bg-[#DC143C] rounded-md"
+                onClick={addToCartHandler}
+              >
+                Add to cart
+              </button>
             </div>
           </div>
         </div>

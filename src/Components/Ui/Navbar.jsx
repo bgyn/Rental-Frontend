@@ -20,7 +20,7 @@ const Navbar = () => {
     }
   }
   return (
-    <header className="flex justify-around px-10 items-center w-full max-w-[1440px] sticky top-0 z-10 drop-shadow-md bg-slate-50">
+    <header className="flex justify-between px-10 items-center w-full max-w-[1440px] sticky top-0 z-10 drop-shadow-md bg-slate-50">
       <div className="flex:1">
         <img src={logo} alt="Rentpal logo" className="w-[4rem]" />
       </div>
@@ -31,7 +31,7 @@ const Navbar = () => {
           <Link to='/sell'>Sell</Link>
         </div>
       </nav>
-       { searchVisibility && <form className="w-[35rem] ml-10 invisible md:visible">
+       { searchVisibility && <form className="w-[35rem] lg:ml-40  invisible md:visible ">
           <label
             htmlFor="default-search"
             className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
@@ -71,7 +71,7 @@ const Navbar = () => {
             </button>
           </div>
         </form>}
-      <div className="flex items-center gap-2 justify-end flex-1">
+      <div className="flex items-center justify-end gap-2 flex-1">
         <p>Jayash Shrestha</p>
         <a href="#" className="px-3 py-2 bg-black rounded-full text-white">
           J

@@ -17,42 +17,59 @@ const Category = () => {
             resourceful community.
           </p>
         </div>
-        <div className="w-full h-full flex overflow-x-scroll scroll whitespace-nowrap scroll-smooth gap-3 md:gap-8 cursor-pointer mt-4">
-          <div className="flex flex-col justify-center items-center bg-[#FF6B6B] p-4 rounded-full w-[8rem] h-[8rem] md:w-[10rem] md:h-[10rem] shadow-md shadow-black m-1">
+        <div className="w-full flex  overflow-x-scroll scroll whitespace-nowrap scroll-smooth gap-3 md:gap-8 cursor-pointer mt-4">
+          <div className="flex flex-col shrink-0 justify-center items-center bg-[#FF6B6B] p-4 rounded-full w-[8rem] h-[8rem] md:w-[10rem] md:h-[10rem] shadow-md shadow-black m-1">
             <MdOutlineTwoWheeler className=" text-[5rem]" />
             <h4>Two wheelers</h4>
             <Button>View</Button>
           </div>
-          <div className="flex flex-col justify-center items-center bg-[#FF6B6B] p-4 rounded-full w-[8rem] h-[8rem] md:w-[10rem] md:h-[10rem] shadow-md shadow-black m-1">
+          <div className="flex flex-col shrink-0 justify-center items-center bg-[#FF6B6B] p-4 rounded-full w-[8rem] h-[8rem] md:w-[10rem] md:h-[10rem] shadow-md shadow-black m-1">
             <MdOutlineTwoWheeler className=" text-[5rem]" />
             <h4>Two wheelers</h4>
             <Button>View</Button>
           </div>
-          <div className="flex flex-col justify-center items-center bg-[#FF6B6B] p-4 rounded-full w-[8rem] h-[8rem] md:w-[10rem] md:h-[10rem] shadow-md shadow-black m-1">
+          <div className="flex flex-col shrink-0 justify-center items-center bg-[#FF6B6B] p-4 rounded-full w-[8rem] h-[8rem] md:w-[10rem] md:h-[10rem] shadow-md shadow-black m-1">
             <MdOutlineTwoWheeler className=" text-[5rem]" />
             <h4>Two wheelers</h4>
             <Button>View</Button>
           </div>
-          <div className="flex flex-col justify-center items-center bg-[#FF6B6B] p-4 rounded-full w-[8rem] h-[8rem] md:w-[10rem] md:h-[10rem] shadow-md shadow-black m-1">
+          <div className="flex flex-col shrink-0 justify-center items-center bg-[#FF6B6B] p-4 rounded-full w-[8rem] h-[8rem] md:w-[10rem] md:h-[10rem] shadow-md shadow-black m-1">
             <MdOutlineTwoWheeler className=" text-[5rem]" />
             <h4>Two wheelers</h4>
             <Button>View</Button>
           </div>
-          <div className="flex flex-col justify-center items-center bg-[#FF6B6B] p-4 rounded-full w-[8rem] h-[8rem] md:w-[10rem] md:h-[10rem] shadow-md shadow-black m-1">
+          <div className="flex flex-col shrink-0 justify-center items-center bg-[#FF6B6B] p-4 rounded-full w-[8rem] h-[8rem] md:w-[10rem] md:h-[10rem] shadow-md shadow-black m-1">
             <MdOutlineTwoWheeler className=" text-[5rem]" />
             <h4>Two wheelers</h4>
             <Button>View</Button>
           </div>
-          <div className="flex flex-col justify-center items-center bg-[#FF6B6B] p-4 rounded-full w-[8rem] h-[8rem] md:w-[10rem] md:h-[10rem] shadow-md shadow-black m-1">
+          <div className="flex flex-col shrink-0 justify-center items-center bg-[#FF6B6B] p-4 rounded-full w-[8rem] h-[8rem] md:w-[10rem] md:h-[10rem] shadow-md shadow-black m-1">
             <MdOutlineTwoWheeler className=" text-[5rem]" />
             <h4>Two wheelers</h4>
             <Button>View</Button>
           </div>
-          <div className="flex flex-col justify-center items-center bg-[#FF6B6B] p-4 rounded-full w-[8rem] h-[8rem] md:w-[10rem] md:h-[10rem] shadow-md shadow-black m-1">
+          <div className="flex flex-col shrink-0 justify-center items-center bg-[#FF6B6B] p-4 rounded-full w-[8rem] h-[8rem] md:w-[10rem] md:h-[10rem] shadow-md shadow-black m-1">
             <MdOutlineTwoWheeler className=" text-[5rem]" />
             <h4>Two wheelers</h4>
             <Button>View</Button>
           </div>
+          <div className="flex flex-col shrink-0 justify-center items-center bg-[#FF6B6B] p-4 rounded-full w-[8rem] h-[8rem] md:w-[10rem] md:h-[10rem] shadow-md shadow-black m-1">
+            <MdOutlineTwoWheeler className=" text-[5rem]" />
+            <h4>Two wheelers</h4>
+            <Button>View</Button>
+          </div>
+          <div className="flex flex-col shrink-0 justify-center items-center bg-[#FF6B6B] p-4 rounded-full w-[8rem] h-[8rem] md:w-[10rem] md:h-[10rem] shadow-md shadow-black m-1">
+            <MdOutlineTwoWheeler className=" text-[5rem]" />
+            <h4>Two wheelers</h4>
+            <Button>View</Button>
+          </div>
+          <div className="flex flex-col shrink-0 justify-center items-center bg-[#FF6B6B] p-4 rounded-full w-[8rem] h-[8rem] md:w-[10rem] md:h-[10rem] shadow-md shadow-black m-1">
+            <MdOutlineTwoWheeler className=" text-[5rem]" />
+            <h4>Two wheelers</h4>
+            <Button>View</Button>
+          </div>
+          
+
         </div>
       </div>
     </>
