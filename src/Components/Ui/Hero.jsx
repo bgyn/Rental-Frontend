@@ -3,7 +3,7 @@ import {} from "flowbite";
 
 const Hero = () => {
   return (
-    <div className="w-full h-[40vh] bg-hero-img bg-cover bg-center bg-no-repeat flex items-center justify-center">
+    <div className="w-full h-[60vh] bg-hero-img bg-cover bg-center bg-no-repeat flex items-center justify-center">
       <form className="w-3/4 lg:w-2/4 lg:2/4">
         <label
           htmlFor="default-search"

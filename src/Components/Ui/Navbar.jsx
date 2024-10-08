@@ -3,8 +3,11 @@ import { FaChevronDown } from "react-icons/fa";
 import { IoCart } from "react-icons/io5";
 import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+  const cartData = useSelector((item)=> item.cart);
+
   const [menuVisibility, setMenuVisibility] = useState(false);
   const [searchVisibility, setSearchVisibility] = useState(false);
   window.addEventListener("scroll", scrollToSearch);
@@ -19,15 +22,19 @@ const Navbar = () => {
     }
   }
   return (
-    <header className="flex justify-between px-10 items-center w-full max-w-[1440px] sticky top-0 z-10 drop-shadow-md bg-slate-50">
-      <div className="flex:1">
-        <img src={logo} alt="Rentpal logo" className="w-[4rem]" />
-      </div>
+    <header className="flex justify-between px-10 items-center w-full max-w-[1440px] fixed top-0 z-10 drop-shadow-md backdrop-blur-md">
+      <Link to='/'>Logo</Link>
       <nav className="hidden lg:flex items-center justify-between md:space-x-10 flex:3 ml-8">
         <div className="flex gap-2">
-          <Link to="/">Buy</Link>
-          <Link to="/rent">Rent</Link>
-          <Link to="/sell">Sell</Link>
+          <Link to="/rent" className="hover:text-[#DC143C]">
+            Buy
+          </Link>
+          <Link to="/rent" className="hover:text-[#DC143C]">
+            Rent
+          </Link>
+          <Link to="/sell" className="hover:text-[#DC143C]">
+            Sell
+          </Link>
         </div>
       </nav>
       {searchVisibility && (
@@ -73,15 +80,18 @@ const Navbar = () => {
         </form>
       )}
       <div className="flex items-center justify-end gap-2 flex-1">
-        <p>Jayash Shrestha</p>
+        <p>User</p>
         <a href="#" className="px-3 py-2 bg-black rounded-full text-white">
           J
         </a>
         <button className="lg:hidden " onClick={dropHandler}>
           <FaChevronDown />
         </button>
-        <Link to='/cart' className="hidden lg:flex">
-         <IoCart size={26} />
+        <Link to="/cart" className="hidden lg:flex">
+          <div className="flex items-center bg-[#DC143C] rounded-lg p-1">
+            <IoCart size={26} />
+            <p>{cartData.TotalQuantity}</p>
+          </div>
         </Link>
       </div>
 
@@ -109,7 +119,10 @@ const Navbar = () => {
         >
           Sell
         </Link>
-        <Link to='/cart' className="w-full text-center p-4 hover:bg-[#DC143C] transition-all cursor-pointer" >
+        <Link
+          to="/cart"
+          className="w-full text-center p-4 hover:bg-[#DC143C] transition-all cursor-pointer"
+        >
           Go to cart
         </Link>
       </div>

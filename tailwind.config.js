@@ -15,10 +15,7 @@ export default {
         primary:"#50B498",
         secondary:"#9CDBA6",
       },
-      fontFamily:{
-        kanit: ["Kanit","sans-serif"],
-        averia: ["Averia Serif Libre", "serif"],
-      },
+      
     },
   },
   plugins: [

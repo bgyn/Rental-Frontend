@@ -11,18 +11,18 @@ const ProductScreen = () => {
   const prodData = data.filter((prod) => prod.id == id);
 
   function addToCartHandler() {
-    console.log('pressed')
     dispatch(cartActions.addToCart({
       id: id,
       name:prodData[0].name,
       img: prodData[0].img,
       price: prodData[0].price,
+      desc: prodData[0].description,
       }));
   }
   return (
     <>
       <Navbar />
-      <div className="flex flex-col md:px-20 lg:px-10 items-center">
+      <div className="flex flex-col md:px-20 lg:px-10 items-center mt-11">
         <div className=" flex flex-col md:flex-row gap-5 ">
           <div className="flex-1 justify-center">
             <img

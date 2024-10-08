@@ -1,10 +1,13 @@
 import React from "react";
+import { cartActions } from "../../../store/cartSlice";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+const CartItems = ({ id, name, price, img, description }) => {
+  const dispatch = useDispatch();
 
-const CartItems = ({name, price, img}) => {
-
-    function removeHandler(){
-        console.log('pressed');   
-    }
+  function removeHandler() {
+    dispatch(cartActions.removeFromCart({ id: id, price: price }));
+  }
 
   return (
     <div className="rounded-3xl border-2 border-gray-200 p-4 lg:p-8 grid grid-cols-12 mb-8 max-lg:max-w-lg max-lg:mx-auto gap-y-4">
@@ -20,7 +23,10 @@ const CartItems = ({name, price, img}) => {
           <h5 className="font-manrope font-bold text-2xl leading-9 text-gray-900">
             {name}
           </h5>
-          <button className="rounded-full group flex items-center justify-center focus-within:outline-red-500" onClick={removeHandler}>
+          <button
+            className="rounded-full group flex items-center justify-center focus-within:outline-red-500"
+            onClick={removeHandler}
+          >
             <svg
               width="34"
               height="34"
@@ -46,12 +52,10 @@ const CartItems = ({name, price, img}) => {
           </button>
         </div>
         <p className="font-normal text-base leading-7 text-gray-500 mb-6">
-          Introducing our sleek round white portable speaker, the epitome of
-          style and sound! Elevate your auditory experience with this compact
-          yet powerful device that delivers crystal-clear audio wherever you go.{" "}
-          <a href="javascript:;" className="text-indigo-600">
+          {description}{" "}
+          <Link to={`/product/${id}`} className="text-[#DC143C]">
             More....
-          </a>
+          </Link>
         </p>
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-4">
@@ -79,7 +83,7 @@ const CartItems = ({name, price, img}) => {
               className="border border-gray-200 rounded-full w-10 aspect-square outline-none text-gray-900 font-semibold text-sm py-1.5 px-3 bg-gray-100  text-center"
               placeholder="2"
             />
-            <button className="group rounded-[50px] border border-gray-200 shadow-sm shadow-transparent p-2.5 flex items-center justify-center bg-white transition-all duration-500 hover:shadow-gray-200 hover:bg-gray-50 hover:border-gray-300 focus-within:outline-gray-300" >
+            <button className="group rounded-[50px] border border-gray-200 shadow-sm shadow-transparent p-2.5 flex items-center justify-center bg-white transition-all duration-500 hover:shadow-gray-200 hover:bg-gray-50 hover:border-gray-300 focus-within:outline-gray-300">
               <svg
                 className="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
                 width="18"

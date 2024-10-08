@@ -5,16 +5,16 @@ import { Link } from "react-router-dom";
 const Product = ({ id, name, image, price, rating }) => {
   return (
     <Link to={`/product/${id}`}>
-      <div className="inline-block mr-3 md:mr-5 cursor-pointer">
+      <div className="inline-block mr-3 md:mr-5 cursor-pointer hover:drop-shadow-lg border-2 rounded-lg overflow-hidden transition-all hover:scale-105 duration-300">
         <img src={image} alt="Product photo" className="w-[12rem] mb-4 h-[9rem] object-cover" />
-        <div className=" leading-4">
+        <div className="px-1">
+          <h4 className="font-semibold">{name} </h4>
           <p>
-            <span className=" font-semibold">Rs.</span>
-            {price}
+            <span className=" font-medium">Rs.</span>
+            {price} <span className=" text-sm">per day</span>
           </p>
-          <h4 className="font-semibold">{name}</h4>
           <p>Chitwan, parsa</p>
-          <div className="flex">
+          <div className="flex items-center">
             <MdOutlineStarPurple500 />
             <p>{rating}</p>
           </div>
